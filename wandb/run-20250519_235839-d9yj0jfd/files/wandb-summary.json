@@ -1,0 +1,1 @@
+{"survive time":480,"_step":4,"episode":2,"death count":0,"_timestamp":1.747674064619954e+09,"global_step":2048,"_wandb":{"runtime":273},"reward":-10,"rollout/ep_rew_mean":-10,"_runtime":147.539084,"time/fps":15,"rollout/ep_len_mean":567.5}
