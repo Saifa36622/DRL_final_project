@@ -78,6 +78,7 @@ class NPC(AnimatedSprite):
                 self.game.player.shot = False
                 self.pain = True
                 self.health -= self.game.weapon.damage
+                self.game.hit_count += 1
                 self.check_health()
 
     def check_health(self):

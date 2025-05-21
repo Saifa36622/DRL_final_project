@@ -39,7 +39,7 @@ class Player:
 
             # un commend this to reun main
 
-            # self.game.new_game()
+            self.game.new_game()
             
 
     def get_damage(self, damage):
@@ -114,19 +114,19 @@ class Player:
         # keys = pg.key.get_pressed()
         keys = action
         num_key_pressed = -1
-        if action[1]:
+        if action[1] == 1:
             num_key_pressed += 1
             dx += speed_cos
             dy += speed_sin
-        if action[2]:
+        if action[2]== 1:
             num_key_pressed += 1
             dx += -speed_cos
             dy += -speed_sin
-        if action[3]:
+        if action[3]== 1:
             num_key_pressed += 1
             dx += speed_sin
             dy += -speed_cos
-        if action[4]:
+        if action[4]== 1:
             num_key_pressed += 1
             dx += -speed_sin
             dy += speed_cos

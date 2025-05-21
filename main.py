@@ -28,6 +28,8 @@ class Game:
         self.count_death = 0
         self.game_over_check = False
         self.use_time = 0
+        self.win_check = False
+        self.hit_count = 0
         self.new_game()
 
     def new_game(self):
@@ -40,7 +42,9 @@ class Game:
         self.sound = Sound(self)
         self.count_death = 0
         self.use_time = 0
+        self.hit_count = 0
         self.game_over_check = False
+        self.win_check = False
         self.pathfinding = PathFinding(self)
         pg.mixer.music.play(-1)
 
@@ -67,7 +71,7 @@ class Game:
         
         self.raycasting.update()
 
-        win_check = self.object_handler.update2()
+        self.win_check = self.object_handler.update2()
 
         # print(f"Deaths so far: {self.count_death}")
         # print(type(self.player.health))
@@ -77,7 +81,7 @@ class Game:
         pg.display.set_caption(f'{self.clock.get_fps() :.1f}')
         self.use_time += 1
         
-        return win_check
+
 
     def draw(self):
         # self.screen.fill('black')
